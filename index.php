@@ -4,19 +4,19 @@ class Livre
 {
     // attributs
     private string $_titre;
-    private $_nPage;
-    private DateTime $_anne;
+    private $_nPages;
+    private DateTime $_annee;
     private $_prix;
-    private string $_autheur;
+    private string $_auteur;
 
     // methodes
-    public function __construct(string $titre, $nPage, string $anne, $prix, string $autheur)
+    public function __construct(string $titre, $nPages, string $annee, $prix, string $auteur)
     {
         $this->_titre = $titre;
-        $this->_nPage = $nPage;
-        $this->_annes = $anne;
+        $this->_nPages = $nPages;
+        $this->_annee = $annee;
         $this->_prix = $prix;
-        $this->_autheur = $autheur;
+        $this->_auteur = $auteur;
     }
 
     // Getters
@@ -24,23 +24,26 @@ class Livre
     {
         return $this->_titre;
     }
-    public function getNpage()
+    public function getPages()
     {
-        return $this->_nPage;
+        return $this->_nPages;
     }
-    public function getAnne()
+    public function getAnnee()
     {
-        return $this->_anne;
+        return $this->_annee;
     }
     public function getPrix()
     {
         return $this->_prix;
     }
-    public function getAutheur()
+    public function getAuteur()
     {
-        return $this->_autheur;
+        return $this->_auteur;
     }
-
+    public function __toString()
+    {
+        return $this->_titre." (".$this->_annee.") : ".$this->_nPages." pages / ".$this->_prix." €<br>";
+    }
 };
 
 

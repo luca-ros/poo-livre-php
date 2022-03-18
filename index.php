@@ -6,14 +6,15 @@ Vous implémenterez une méthode afficherBibliographie qui permettra d’affiche
 
 <?php
 
-
+require "Auteur.php";
+require "Livre.php";
 
 $aut1 = new Auteur ("BRUNO", "Carlo");
 $aut2 = new Auteur ("GIOVA", "Archi");
 
-$book1 = new Livre ("NUIT", 220, 2010, 20, "Carlo");
-$book2 = new Livre ("PONT", 632, 2000, 15, "Archi");
-$book3 = new Livre ("PINOCCHIO", 823, 1985, 14, "Carlo");
+$book1 = new Livre ("NUIT", 220, 2010, 20, "$aut1");
+$book2 = new Livre ("PONT", 632, 2000, 15, "$aut2");
+$book3 = new Livre ("PINOCCHIO", 823, 1985, 14, "$aut1");
 
 
 

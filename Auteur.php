@@ -32,13 +32,13 @@
             foreach($this->_livres as $book)
                 echo $book;
         }else{
-            echo " $this it's time"
+            echo " $this it's time to put an Author";
         }
     }
 
-    public function __toString()
-    {
-        return $this->_prenom ." " ."this->_nom. "<br>";
+    public function __toString(){
+    
+        return "$this->_prenom $this->_nom<br>";
     }
 
     ?>

@@ -1,7 +1,6 @@
 <?php
 
-require "Auteur.php";
-require "index.php";
+
 class Livre
 {
     // attributs
@@ -9,10 +8,10 @@ class Livre
     private $_nPages;
     private DateTime $_annee;
     private $_prix;
-    private string $_auteur;
+    private $_auteur;
 
     // methodes
-    public function __construct(string $titre, $nPages, string $annee, $prix, string $auteur)
+    public function __construct(string $titre, $nPages, string $annee, $prix, $auteur)
     {
         $this->_titre = $titre;
         $this->_nPages = $nPages;

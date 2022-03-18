@@ -36,9 +36,11 @@
         }
     }
 
-    public function __toString(){
+    public function __toString()
+    {
     
-        return "$this->_prenom $this->_nom<br>";
+        return "$this->_prenom $this->_nom.<br>";
     }
+}
 
     ?>

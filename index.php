@@ -18,7 +18,7 @@ $book3 = new Livre ("PINOCCHIO", 823, 1985, 14, "$aut1");
 
 
 
-$aut1->printAuteur();
+$aut1->showMeBook();
 
 
 

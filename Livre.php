@@ -15,7 +15,7 @@ class Livre
     {
         $this->_titre = $titre;
         $this->_nPages = $nPages;
-        $this->_annee = $annee;
+        $this->_annee = new DateTime ($annee);
         $this->_prix = $prix;
         $this->_auteur = $auteur;
     }

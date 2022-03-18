@@ -1,3 +1,9 @@
+<h1>POO Livre</h1>  
+<p>Vous êtes chargé(e) de créer un projet PHP orienté objet permettant de gérer des livres et leurs auteurs respectifs <br>
+Les livres sont caractérisés par un titre, un nombre de pages, une année de parution, un prix et un auteur. Un auteur est identifié par un nom et un prénom.<br>
+Une méthode toString sera appréciée dans chacune de vos classes. <br>
+Vous implémenterez une méthode afficherBibliographie qui permettra d’afficher la bibliographie d’un auteur :</p>
+
 <?php
 
 class Livre
@@ -42,16 +48,11 @@ class Livre
     }
     public function __toString()
     {
-        return $this->_titre." (".$this->_annee.") : ".$this->_nPages." pages / ".$this->_prix." €<br>";
+        return $this->_titre." (".$this->_annee.") : ".$this->_nPages." pages  ".$this->_prix." €<br>";
     }
 };
 
 
-
-// class autheur
-// {
-
-// }
 
 
 ?>

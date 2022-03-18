@@ -2,20 +2,55 @@
 
 require "Auteur.php";
 require "index.php";
+class Livre
+{
+    // attributs
+    private string $_titre;
+    private $_nPages;
+    private DateTime $_annee;
+    private $_prix;
+    private string $_auteur;
+
+    // methodes
+    public function __construct(string $titre, $nPages, string $annee, $prix, string $auteur)
+    {
+        $this->_titre = $titre;
+        $this->_nPages = $nPages;
+        $this->_annee = $annee;
+        $this->_prix = $prix;
+        $this->_auteur = $auteur;
+    }
+
+    // Getters
+    public function getTitre()
+    {
+        return $this->_titre;
+    }
+    public function getPages()
+    {
+        return $this->_nPages;
+    }
+    public function getAnnee()
+    {
+        return $this->_annee;
+    }
+    public function getPrix()
+    {
+        return $this->_prix;
+    }
+    public function getAuteur()
+    {
+        return $this->_auteur;
+    }
+    public function __toString()
+    {
+        return $this->_titre." (".$this->_annee.") : ".$this->_nPages." pages / ".$this->_prix." €<br>";
+    }
+};
 
 
-
-$aut1 = new Auteur ("BRUNO", "Carlo");
-$aut2 = new Auteur ("GIOVA", "Archi");
-
-$book1 = new Livre ("NUIT",220,2010,20,);
-$book2 = new Livre ("PONT",632, 2000,15,);
-$book3 = new Livre ("PINOCCHIO",823,1985,14);
-
-
-
-$aut1->printAuteur();
 
 
 
 ?>
+

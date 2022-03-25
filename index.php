@@ -12,14 +12,16 @@ require "Livre.php";
 $aut1 = new Auteur ("BRUNO", "Carlo");
 $aut2 = new Auteur ("GIOVA", "Archi");
 
-$book1 = new Livre ("NUIT", 220, 2010, 20, "$aut1");
-$book2 = new Livre ("PONT", 632, 2000, 15, "$aut2");
-$book3 = new Livre ("PINOCCHIO", 823, 1985, 14, "$aut1");
+$book1 = new Livre ("NUIT", 220, 2010, 20, $aut1);
+$book2 = new Livre ("PONT", 632, 2000, 15, $aut2);
+$book3 = new Livre ("PINOCCHIO", 823, 1985, 14, $aut1);
 
+// echo $book3;
+// echo $book2;
+// echo $book1;
 
-
-$aut1->showMeBook();
-
+$aut1->afficherBibliographie();
+$aut2->afficherBibliographie();
 
 
 ?>

@@ -13,33 +13,29 @@
     }
 
     // Getters
-    public function getNom()
-    {
+    public function getNom() {
         return $this->_nom;
     }
-    public function getPrenom()
-    {
+    public function getPrenom() {
         return $this->_prenom;
     }
-    public function addBook($livre)
-    {
-        array_push($this->_book, $livre) ;
+    public function addBook(Livre $livre) {
+        array_push($this->_livres, $livre);
     }
 
-    public function showMeBook(){
-        if(count($this->livres) > 0){
+    public function afficherBibliographie() {
+        if(count($this->_livres) > 0){
             echo "$this";
             foreach($this->_livres as $book)
                 echo $book;
         }else{
-            echo " $this it's time to put an Author";
+            echo " $this <br> NO Author Find .<br>";
         }
     }
 
-    public function __toString()
-    {
+    public function __toString() {
     
-        return "$this->_prenom $this->_nom.<br>";
+        return "$this->_prenom $this->_nom. <br>";
     }
 }
 

@@ -5,19 +5,20 @@ class Livre
 {
     // attributs
     private string $_titre;
-    private $_nPages;
-    private DateTime $_annee;
-    private $_prix;
-    private $_auteur;
+    private int $_nPages;
+    private int $_annee;
+    private float $_prix;
+    private Auteur $_auteur;
 
     // methodes
-    public function __construct(string $titre, $nPages, string $annee, $prix, $auteur)
+    public function __construct(string $titre, $nPages, $annee, $prix, $auteur)
     {
         $this->_titre = $titre;
         $this->_nPages = $nPages;
-        $this->_annee = new DateTime ($annee);
+        $this->_annee = $annee;
         $this->_prix = $prix;
         $this->_auteur = $auteur;
+        $this->_auteur->addBook($this);
     }
 
     // Getters
